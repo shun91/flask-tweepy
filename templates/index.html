@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flask + Tweepy Sample Application</title>
+</head>
+<body>
+  <h1>Flask + Tweepy Sample Application</h1>
+  {% if timeline == False %}
+    <p><a href="{{ url_for('twitter_auth') }}">連携アプリ認証</a></p>
+  {% else %}
+    <!-- 取得した timeline のテキストを表示 -->
+    {% for status in timeline %}
+      <p>{{ status.text }}</p>
+      <hr>
+    {% endfor %}
+  {% endif %}
+  <footer>
+    <small>
+      This application is created by <a href="http://shirokai.hatenablog.com/">しろかい！</a>
+    </small>
+  </footer>
+</body>
+</html>
