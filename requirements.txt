@@ -1,5 +1,5 @@
 Flask==1.0
-Jinja2==2.8
+Jinja2==2.10.3
 Werkzeug==0.15.3
 gunicorn==19.5.0
 tweepy==3.4.0
